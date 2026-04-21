@@ -1,0 +1,20 @@
+{
+  "name": "portafolio-jesus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal portfolio for Jesus Espinoza — Full-Stack Developer.",
+  "type": "module",
+  "scripts": {
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview",
+    "install:all": "npm install && npm --prefix client install"
+  },
+  "dependencies": {
+    "@vercel/kv": "^3.0.0",
+    "resend": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

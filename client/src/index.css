@@ -1,0 +1,174 @@
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-sans/700.css';
+@import '@fontsource/geist-sans/800.css';
+@import '@fontsource/geist-mono/400.css';
+@import '@fontsource/geist-mono/500.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  body {
+    @apply bg-bg-light text-ink-light-primary font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  .dark body {
+    @apply bg-bg-dark text-ink-dark-primary;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg-light;
+  }
+
+  .dark *:focus-visible {
+    @apply ring-offset-bg-dark;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-ink-light-primary;
+  }
+
+  .dark ::selection {
+    @apply text-ink-dark-primary;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto max-w-content px-6 md:px-8;
+  }
+
+  .section {
+    @apply py-24 md:py-32;
+  }
+
+  .section-title {
+    @apply font-semibold tracking-[-0.03em] leading-[1.05];
+    font-size: clamp(2rem, 3.2vw + 1rem, 3.75rem);
+  }
+
+  .display {
+    @apply font-semibold tracking-[-0.035em] leading-[1.02];
+    font-size: clamp(2.75rem, 8vw + 1rem, 7.5rem);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      110deg,
+      theme('colors.accent.DEFAULT') 0%,
+      theme('colors.brand.violet') 35%,
+      theme('colors.brand.coral') 65%,
+      theme('colors.accent.hover') 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientPan 10s ease infinite;
+  }
+
+  .glass {
+    @apply backdrop-blur-md bg-bg-light-secondary/60 dark:bg-bg-dark-secondary/50 border border-accent/20 dark:border-accent/25;
+  }
+
+  .persona-dot {
+    @apply inline-block h-1.5 w-1.5 rounded-full mr-2 align-middle;
+  }
+
+  .section-eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.22em] text-ink-light-secondary dark:text-ink-dark-secondary;
+  }
+
+  .section-eyebrow-dot::before {
+    content: '';
+    @apply inline-block h-1.5 w-1.5 rounded-full bg-accent mr-2 align-middle;
+  }
+
+  .card {
+    @apply rounded-2xl border bg-bg-light-secondary border-edge-light p-6 transition-all duration-200 ease-out;
+  }
+
+  .dark .card {
+    @apply bg-bg-dark-secondary border-edge-dark;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border px-3 py-1 font-mono text-[11px] tracking-wide border-edge-light/80 bg-bg-light/60 text-ink-light-secondary;
+  }
+
+  .dark .pill {
+    @apply border-edge-dark bg-bg-dark/40 text-ink-dark-secondary;
+  }
+
+  .stack-list {
+    @apply flex flex-wrap gap-1.5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink-light-primary px-6 py-3 font-medium text-bg-light transition-all duration-200 ease-out hover:bg-accent hover:text-ink-light-primary hover:-translate-y-0.5;
+  }
+
+  .dark .btn-primary {
+    @apply bg-ink-dark-primary text-bg-dark hover:bg-accent hover:text-ink-light-primary;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-edge-light px-6 py-3 font-medium text-ink-light-primary transition-all duration-200 ease-out hover:border-ink-light-primary hover:-translate-y-0.5;
+  }
+
+  .dark .btn-secondary {
+    @apply border-edge-dark text-ink-dark-primary hover:border-ink-dark-primary;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-edge-light px-4 py-2 text-sm font-medium text-ink-light-primary transition-all duration-200 ease-out hover:border-ink-light-primary hover:-translate-y-0.5;
+  }
+
+  .dark .btn-ghost {
+    @apply border-edge-dark text-ink-dark-primary hover:border-ink-dark-primary;
+  }
+
+  .icon-btn {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-edge-light text-ink-light-secondary transition-all duration-200 ease-out hover:border-ink-light-primary hover:text-ink-light-primary hover:-translate-y-0.5;
+  }
+
+  .dark .icon-btn {
+    @apply border-edge-dark text-ink-dark-secondary hover:border-ink-dark-primary hover:text-ink-dark-primary;
+  }
+
+  .muted {
+    @apply text-ink-light-secondary;
+  }
+
+  .dark .muted {
+    @apply text-ink-dark-secondary;
+  }
+
+  .hairline {
+    @apply border-t border-edge-light dark:border-edge-dark;
+  }
+}

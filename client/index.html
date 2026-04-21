@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jesus Espinoza — Full-Stack Developer & Computer Software Engineer based in Mexico City. Building scalable e-commerce and IoT platforms." />
+    <meta name="author" content="Jesus Espinoza" />
+    <meta name="theme-color" content="#7DD3FC" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jesus Espinoza — Full-Stack Developer" />
+    <meta property="og:description" content="Computer Software Engineer building scalable full-stack experiences — from real-time e-commerce platforms to IoT-driven dashboards." />
+    <meta property="og:image" content="/profile-photo.jpeg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jesus Espinoza — Full-Stack Developer" />
+    <meta name="twitter:description" content="Computer Software Engineer building scalable full-stack experiences." />
+    <meta name="twitter:image" content="/profile-photo.jpeg" />
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+
+    <title>Jesus Espinoza — Full-Stack Developer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

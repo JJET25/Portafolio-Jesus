@@ -1,0 +1,38 @@
+export const updates = [
+  {
+    id: '2026-04-20-portfolio-shipped',
+    date: '2026-04-20',
+    title: 'Shipped the new portfolio',
+    tags: ['personal', 'shipped'],
+    body: "Today I pushed v1 of this site. Built with React, Vite, Tailwind, and Framer Motion. The goal: a minimal, high-signal landing page for recruiters and collaborators — no lorem ipsum, no fluff, just the work.",
+    media: null,
+    link: null,
+  },
+  {
+    id: '2026-03-12-gummy-milestone',
+    date: '2026-03-12',
+    title: 'Gummy Blast hit 250+ monthly orders',
+    tags: ['gummy-blast', 'milestone'],
+    body: "Our custom inventory-sync engine has now held 99.9% data consistency through six nationwide promotion weekends. Stripe webhook reliability has been rock-solid since the last refactor.",
+    media: null,
+    link: { href: 'https://gummyblast.lovable.app/', label: 'See it live' },
+  },
+  {
+    id: '2026-02-08-agrosense-firmware',
+    date: '2026-02-08',
+    title: 'AgroSense firmware v2 — deep-sleep tuning',
+    tags: ['iot', 'agrosense'],
+    body: "Rewrote the ESP32 polling loop so the radio only wakes for MQTT publish windows. Early field tests show a ~3.2× improvement in battery life on the same capacity cells.",
+    media: null,
+    link: { href: 'https://smart-grow-monitor.lovable.app/', label: 'Monitor dashboard' },
+  },
+  {
+    id: '2026-01-15-learning-go',
+    date: '2026-01-15',
+    title: 'Picking up Go',
+    tags: ['learning'],
+    body: "Started working through A Tour of Go on the side. Curious how the type system and goroutine model will change the way I reach for abstractions when I'm back in JS/TS.",
+    media: null,
+    link: null,
+  },
+];
